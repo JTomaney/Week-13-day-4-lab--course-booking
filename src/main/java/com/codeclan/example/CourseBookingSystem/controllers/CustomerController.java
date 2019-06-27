@@ -31,4 +31,10 @@ public class CustomerController {
         return customerRepository.findCustomersByTownAndBookings_CourseId(capTown, id);
     }
 
+    @GetMapping(value = "/age/{age}/town/{town}/course/{id}")
+    public List<Customer> findCustomersByAgeGreaterThanAndTownAndBookings_CourseId(@PathVariable int age, @PathVariable String town, @PathVariable Long id) {
+        String capTown = StringUtils.capitalize(town);
+        return customerRepository.findCustomersByAgeGreaterThanAndTownAndBookings_CourseId(age, capTown, id);
+    }
+
 }
