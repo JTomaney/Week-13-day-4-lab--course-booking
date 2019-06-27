@@ -14,13 +14,23 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
+
+    @ManyToOne
+    @JoinColumn(name = "course_id", nullable = false)
+    private Course course;
+
     public Booking() {
 
     }
 
-    public Booking(String date, Long id) {
+    public Booking(String date, Long id, Customer customer, Course course ) {
         this.date = date;
         this.id = id;
+        this.customer = customer;
+        this.course = course;
     }
 
     public String getDate() {
@@ -37,5 +47,21 @@ public class Booking {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }
