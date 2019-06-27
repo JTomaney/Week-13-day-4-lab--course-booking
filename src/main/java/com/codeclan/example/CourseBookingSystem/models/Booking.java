@@ -1,5 +1,7 @@
 package com.codeclan.example.CourseBookingSystem.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,10 +17,12 @@ public class Booking {
     private Long id;
 
     @ManyToOne
+    @JsonIgnoreProperties("bookings")
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
     @ManyToOne
+    @JsonIgnoreProperties("bookings")
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
