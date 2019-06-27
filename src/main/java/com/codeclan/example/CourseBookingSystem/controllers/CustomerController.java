@@ -17,12 +17,6 @@ import java.util.List;
 public class CustomerController {
 
     @Autowired
-    BookingRepository bookingRepository;
-
-    @Autowired
-    CourseRepository courseRepository;
-
-    @Autowired
     CustomerRepository customerRepository;
 
     @GetMapping(value = "/course/{id}")
