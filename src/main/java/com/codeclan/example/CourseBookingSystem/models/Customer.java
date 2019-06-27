@@ -33,7 +33,7 @@ public class Customer {
 
     }
 
-    public Customer(String name, String town, int age, Long id) {
+    public Customer(String name, String town, int age) {
         this.name = name;
         this.town = town;
         this.age = age;

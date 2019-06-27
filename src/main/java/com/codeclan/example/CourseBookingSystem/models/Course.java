@@ -32,7 +32,7 @@ public class Course {
 
     }
 
-    public Course(String name, String town, int starRating, Long id) {
+    public Course(String name, String town, int starRating) {
         this.name = name;
         this.town = town;
         this.starRating = starRating;

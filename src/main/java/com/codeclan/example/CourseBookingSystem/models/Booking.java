@@ -26,7 +26,7 @@ public class Booking {
 
     }
 
-    public Booking(String date, Long id, Customer customer, Course course ) {
+    public Booking(String date, Customer customer, Course course ) {
         this.date = date;
         this.id = id;
         this.customer = customer;
