@@ -53,7 +53,7 @@ public class CourseBookingSystemApplicationTests {
 
 	@Test
 	public void canGetBookingsForDate() {
-		List<Booking> found = bookingRepository.findBookinsByDate("27-08-19");
+		List<Booking> found = bookingRepository.findBookingsByDate("27-08-19");
 		assertEquals(2, found.size());
 	}
 
